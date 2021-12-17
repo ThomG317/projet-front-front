@@ -1,0 +1,66 @@
+.room-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.room-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 1.75rem 1.25rem;
+  border-bottom: 1px solid darken($very-light-grey, 2.5%);
+  background-color: $white;
+
+  & .room-item__title {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 1.25rem;
+
+    & .room-header__count {
+      margin-left: .5rem;
+      font-size: .9rem;
+      font-weight: normal;
+    }
+
+    & .room-item__status {
+      margin-left: .75rem;
+    }
+  }
+
+  & .room-header__icon {
+    font-size: 4rem;
+    color: $blue;
+  }
+
+  & .room-header__close {
+    position: absolute;
+    top: .5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: .75rem;
+    color: $grey;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $very-light-grey;
+    }
+
+    &:active {
+      background-color: rgba($light-grey, .5);
+      color: darken($grey, 10%);
+    }
+  }
+}
+
+.room-location {
+  height: 50%;
+  width: 100%;
+}

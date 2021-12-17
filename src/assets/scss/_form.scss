@@ -1,0 +1,99 @@
+.input {
+  padding: .5rem .75rem;
+  border: 1px solid $very-light-grey;
+  border-radius: 5px;
+  font-size: .8rem;
+  outline: none;
+  transition: .3s;
+
+  &::placeholder {
+    font-weight: 300;
+    font-style: italic;
+    color: $light-grey;
+  }
+
+  &:hover {
+    border-color: $light-grey;
+    background-color: $light-blue;
+  }
+
+  &:focus {
+    border-color: $blue;
+    background-color: $light-blue;
+  }
+}
+
+.input-group.-search-bar {
+  position: relative;
+  width: 100%;
+
+  & .input {
+    width: 100%;
+    padding-right: 2rem;
+  }
+
+  & .input-group__icon-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    right: 0;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background: none;
+    font-size: 1.25rem;
+    color: $blue;
+    transform: translateY(-50%);
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+
+    & [class^="icon-"] {
+      color: inherit;
+    }
+
+    &:hover {
+      background-color: rgba($very-light-grey, .5);
+      color: lighten($blue, 10%)
+    }
+
+    &:active {
+      background-color: rgba($light-grey, .5);
+      color: darken($blue, 10%)
+    }
+  }
+}
+
+.action-button {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .25rem .5rem;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba($grey, .1);
+  color: inherit;
+  font-size: .8rem;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+
+  & [class^="icon-"] {
+    margin-right: .25rem;
+    color: inherit;
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: rgba($grey, .25);
+  }
+
+  &:active {
+    background-color: rgba($grey, .5);
+  }
+
+}

@@ -1,0 +1,71 @@
+.room-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: scroll;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.room-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem .75rem;
+  width: 100%;
+  border-bottom: 1px solid $very-light-grey;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background-color: rgba($very-light-grey, .5);
+  }
+
+  &:active {
+    background-color: rgba($light-grey, .5);
+  }
+
+  & [class^="icon-"] {
+    font-size: 3rem;
+    color: $blue;
+  }
+
+  &__text {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  &__title {
+    font-weight: 400;
+  }
+
+  &__subtitle {
+    color: $light-grey;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+
+  &__status {
+    padding: .25rem .5rem;
+    border-radius: 3px;
+    background-color: $grey;
+    color: $white;
+    font-weight: 600;
+    font-size: .8rem;
+    white-space: nowrap;
+
+    &.-green {
+      background-color: $green;
+    }
+
+    &.-yellow {
+      background-color: $yellow;
+    }
+
+    &.-red {
+      background-color: $red;
+    }
+  }
+}

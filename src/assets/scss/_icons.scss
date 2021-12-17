@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../font/icomoon.eot?pq9e24');
+  src:  url('../font/icomoon.eot?pq9e24#iefix') format('embedded-opentype'),
+  url('../font/icomoon.ttf?pq9e24') format('truetype'),
+  url('../font/icomoon.woff?pq9e24') format('woff'),
+  url('../font/icomoon.svg?pq9e24#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before {
+  content: "\e900";
+}
+.icon-biotech:before {
+  content: "\e901";
+}
+.icon-close:before {
+  content: "\e902";
+}
+.icon-group_add:before {
+  content: "\e903";
+}
+.icon-groups:before {
+  content: "\e904";
+}
+.icon-meeting_room:before {
+  content: "\e905";
+}
+.icon-reply:before {
+  content: "\e906";
+}
+.icon-school:before {
+  content: "\e907";
+}
+.icon-search:before {
+  content: "\e908";
+}

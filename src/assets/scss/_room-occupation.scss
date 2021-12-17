@@ -1,0 +1,51 @@
+.room-occupation {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  padding: 1.75rem;
+  background-color: $white;
+  border-top: 1px solid darken($very-light-grey, 2.5%);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    div {
+      display: flex;
+
+      .action-button {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  &__count {
+    font-weight: normal;
+    font-size: .9rem;
+  }
+
+  &__affectation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: calc(100% - 2rem);
+  }
+
+  &__add-buttons {
+    display: flex;
+    margin-top: 1rem;
+
+    .action-button {
+      margin-right: 1rem;
+    }
+  }
+}

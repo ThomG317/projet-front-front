@@ -1,0 +1,205 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 50vh;
+  min-width: 50vw;
+  padding: 2rem 3rem;
+  background-color: $white;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+
+  &__container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, .5);
+    z-index: 1;
+  }
+
+  &__content {
+    min-height: 50vh;
+    max-height: 70vh;
+    overflow: scroll;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    font-size: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: none;
+    border: 0;
+    border-radius: .75rem;
+    color: $grey;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $very-light-grey;
+    }
+
+    &:active {
+      background-color: rgba($light-grey, .5);
+      color: darken($grey, 10%);
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    border-bottom: 1px solid $very-light-grey;
+  }
+
+  &__list {
+    list-style-type: none;
+    overflow: scroll;
+  }
+
+  &__list-item {
+    display: flex;
+    padding: .5rem .25rem;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid $very-light-grey;
+    cursor: pointer;
+    transition: .3s;
+
+    &:first-child {
+      border-top: 1px solid $very-light-grey;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:hover {
+      background-color: $very-light-grey;
+    }
+
+    &:active {
+      background-color: rgba($light-grey, .5);
+      color: darken($grey, 10%);
+    }
+
+    &.-selected {
+      background-color: rgba($blue, .25);
+      border-color: $white;
+
+      &:hover {
+        background-color: lighten(rgba($blue, .5), 10%);
+      }
+
+      &:active {
+        background-color: darken(rgba($blue, .5), 10%);
+      }
+    }
+  }
+
+  &__validate-button {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    background-color: $blue;
+    color: $white;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(darken($blue, 10%), .25);
+    transition: .3s;
+
+    &:hover {
+      background-color: lighten($blue, 10%);
+    }
+
+    &:active {
+      background-color: darken($blue, 10%);
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+      box-shadow: none;
+      pointer-events: none;
+      opacity: .5;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    width: 1rem;
+    margin-right: .5rem;
+
+    & > input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      height: 1rem;
+      width: 1rem;
+      opacity: 0;
+      cursor: pointer;
+
+      &:hover + label {
+        background-color: $very-light-grey;
+
+        &:after {
+          background-color: lighten($blue, 10%);
+        }
+      }
+    }
+
+    & > label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+      height: 1rem;
+      width: 1rem;
+      background-color: $white;
+      border: 1px solid $grey;
+      border-radius: .5rem;
+      pointer-events: none;
+      transition: .3s;
+
+      &:after {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        content: "✓";
+        top: calc(.25rem - 1px);
+        left: calc(.25rem - 1px);
+        height: .5rem;
+        width: .5rem;
+        font-size: 0;
+        background-color: $blue;
+        color: $white;
+        border-radius: inherit;
+        opacity: 0;
+        transition: .3s;
+      }
+    }
+
+    & > input:checked + label:after {
+      top: -1px;
+      left: -1px;
+      height: 1rem;
+      width: 1rem;
+      font-size: .75rem;
+      opacity: 1;
+    }
+  }
+}
