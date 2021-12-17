@@ -3,7 +3,7 @@
 ## Lancer l'application
 ### Cloner le projet
 ```
-git clone 
+git clone https://github.com/ThomG317/projet-front-front.git
 ```
 
 ### Installer les dépendances
